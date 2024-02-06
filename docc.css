@@ -1,0 +1,104 @@
+body {
+    background-color: darkgoldenrod;
+}
+
+#carouselExampleAutoplaying {
+    width: 100%;
+    margin-right: 50px;
+}
+
+.carousel-item img {
+    width: 50%;
+    height: 400px;
+}
+
+.fa-solid {
+    font-size: 1.5rem;
+}
+
+.fa-heart {
+    margin-right: 40px;
+}
+
+.card-img-top {
+    height: 200px;
+}
+
+@keyframes continuous-move {
+    0% {
+        transform: translateX(0);
+        color: red;
+    }
+
+    25% {
+        color: orange;
+    }
+
+    50% {
+        color: yellow;
+    }
+
+    75% {
+        color: green;
+    }
+
+    100% {
+        transform: translateX(100vw);
+        color: blue;
+    }
+}
+
+.continuous-text {
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    animation: continuous-move 10s linear infinite;
+    transition: color 0.5s ease-in-out;
+}
+
+.card-img-top {
+    transform: scale(1);
+    /* Ajustez la valeur selon votre besoin d'agrandissement */
+    border-radius: 50%;
+    /* Ou toute autre propriété de changement de forme */
+    transition: transform 0.5s ease-in-out;
+    /* Animation de transition */
+}
+
+/* Style pour l'effet d'animation */
+#selected-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: scale(0);
+    background-size: cover;
+    background-position: center;
+    width: 25rem;
+    height: 30rem;
+    border-radius: 20px;
+    z-index: 999;
+}
+
+@keyframes moveCard {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translate(50vw, 0) rotate(45deg) scale(1.5);
+    }
+
+    50% {
+        transform: translate(50vw, 50vh) rotate(90deg) scale(0.5);
+    }
+
+    75% {
+        transform: translate(0, 50vh) rotate(135deg) scale(1.5);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(180deg) scale(1);
+    }
+
+
+
